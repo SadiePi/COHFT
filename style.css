@@ -12,6 +12,7 @@ body {
   background-color: lightgray;
   height: var(--header-height);
 }
+
 #content {
   /*overflow:hidden;*/
   height: calc(100% - var(--header-height));
@@ -24,20 +25,34 @@ body {
   right: 10px;
 }
 
-nav {
+#header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-nav * {
-  color: inherit;
-  margin: 0 10px;
-  text-decoration: none;
-  line-height: calc(var(--header-height));
+
+#links > * {
+  margin: 0 0 0 10px;
 }
 
-img {
+#account > * {
+  margin: 0 10px 0 0;
+}
+
+#links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#links a {
+  color: inherit;
+  text-decoration: none;
+  line-height: var(--header-height);
+}
+
+nav img {
   max-height: calc(var(--header-height) * 0.85);
-  vertical-align: middle;
 }
 
 .flex-gap {
